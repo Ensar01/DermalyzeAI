@@ -1,0 +1,38 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# Flask
+instance/
+*.db
+*.sqlite3
+
+# VSCode / PyCharm
+.vscode/
+.idea/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Dataset folder
+dermnet/
