@@ -36,3 +36,5 @@ Thumbs.db
 
 # Dataset folder
 dermnet/
+
+ViTmodel_weights.pth
