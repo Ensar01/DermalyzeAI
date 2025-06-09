@@ -1,6 +1,12 @@
+import flask import Flask, render_template, request
+import torch
+import torchvision.transforms as transforms
+
+from transformers import ViTForImageClassification, ViTImageProcessor
+from PIL import Image
 import os
 
-class_Names = [
+class_names = [
     'Acne and Rosacea Photos', 'Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions', 'Atopic Dermatitis Photos', 
     'Bullous Disease Photos', 'Cellulitis Impetigo and other Bacterial Infections', 'Eczema Photos', 'Exanthems and Drug Eruptions', 
     'Hair Loss Photos Alopecia and other Hair Diseases', 'Herpes HPV and other STDs Photos', 'Light Diseases and Disorders of Pigmentation', 
@@ -11,7 +17,7 @@ class_Names = [
     'Warts Molluscum and other Viral Infections'
 ]
 
-class_Details = {
+class_details = {
     "Acne and Rosacea Photos": {
         "Ime": "Akne i rozacea",
         "uzrok": "Poremećaji lojnih žlijezda, hormonalne promjene ili bakterije.",
