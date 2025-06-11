@@ -9,14 +9,49 @@
 <body>
     <nav class = "navbar">
         <img class="Logo" src = "/pics/Logo.png" alt="Logo">
-        <button class="button" type="button">Analiziraj</button>
+        <div class="btns">
+            <a class="lbl" href="#liStyle">Saznaj više</a>
+            <button class="button" type="button" onclick="window.location.href='Predict.html'">Analiziraj</button>
+        </div>
     </nav>
-    <div class="hero-section">
-        <div class = "hero-left">
+    <div class="hero-section" >
+        <div class = "hero-left" >
             <h2 class="hero-title">AI alat za jednostavnu i brzu dijagnozu kožnih problema</h2>
             <h3 class="hero-sub">Podrška u ranoj identifikaciji kožnih oboljenja pomoću AI</h3>
+            <button class="button" id="btnStyle" type="button">Započni analizu</button>
         </div>
-        <img class="hero-img" src = "/pics/hero.png" alt="hero">
+        <img class="hero-img" src = "/pics/hero1.png" alt="hero">
     </div>
+    <div class="recognized-diseases">
+        <h2 class="hero-title" id="liStyle"> DermalyzeAI prepoznaje</h2>
+        <h2 class="hero-title" id="liStyle1">23</h2>
+        <h2 class="hero-title" id="liStyle"> vrste bolesti</h2>
+       
+            <ul  class="disease-list">
+              <li>Akne i rozacea</li>
+              <li>Aktinična keratoza, bazocelularni karcinom i druge zloćudne lezije</li>
+              <li>Atopijski dermatitis</li>
+              <li>Bulozne bolesti</li>
+              <li>Celulitis, impetigo i druge bakterijske infekcije</li>
+              <li>Ekcem</li>
+              <li>Egzantemi i reakcije na lijekove</li>
+              <li>Opadanje kose, alopecija i druge bolesti kose</li>
+              <li>Herpes, HPV i druge polno prenosive bolesti</li>
+              <li>Bolesti izazvane svjetlošću i pigmentacijski poremećaji</li>
+              <li>Lupus i druge bolesti vezivnog tkiva</li>
+              <li>Melanom, rak kože, mladeži i pigmentne promjene</li>
+              <li>Gljivice na noktima i druge bolesti noktiju</li>
+              <li>Otrovni bršljan i drugi kontaktni dermatitis</li>
+              <li>Psorijaza, lichen planus i srodne bolesti</li>
+              <li>Šuga, lajmska bolest i druge infestacije i ujedi</li>
+              <li>Seboroične keratoze i drugi benigni tumori</li>
+              <li>Sistemske bolesti</li>
+              <li>Tinea, gljivice, kandidijaza i druge gljivične infekcije</li>
+              <li>Urtikarija (koprivnjača)</li>
+              <li>Vaskularni tumori</li>
+              <li>Vaskulitis</li>
+              <li>Bradavice, molluscum i druge virusne infekcije</li>
+            </ul>
+        </div>
 </body>
 </html>
