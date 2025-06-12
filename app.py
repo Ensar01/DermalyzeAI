@@ -194,7 +194,7 @@ def index():
         if file.filename == "":
             return "No selected file"
         
-        file_path = os.path.join("static", file.filename)
+        file_path = os.path.join("static/Files", file.filename)
         file.save(file_path)
   
 

@@ -213,6 +213,14 @@ body
     font-weight: 400;
     
 }
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
 .allCard
 {
   display: flex;
@@ -226,7 +234,6 @@ body
   width: 70%;
   background-image: url('/static/pics/card4.png');
   background-size: cover;
-
   border-radius: 8px;
   text-align: center;
   box-shadow: 4px 4px 6px #ab7a4f38;
@@ -235,3 +242,34 @@ body
 {
   transform: scale(1.05);
 }
+.card2
+{
+  transition: transform 0.5s ease-in-out;
+  width: 70%;
+  background-color: #facfc6;
+  background-size: cover;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 4px 4px 6px #ab7a4f38;
+}
+.card2:hover
+{
+  transform: scale(1.05);
+}
+.card3
+{
+  transition: transform 0.5s ease-in-out;
+  width: 70%;
+  background-color: #cdfac6;
+  background-size: cover;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 4px 4px 6px #ab7a4f38;
+}
+.card3:hover
+{
+  transform: scale(1.05);
+}
+
+
+

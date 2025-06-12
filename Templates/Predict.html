@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  href="{{ url_for('static', filename='styles1.css') }}">
-
+    <link rel="stylesheet"  href="{{ url_for('static', filename='Styles/styles1.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='pics/favicon.png') }}">
     <title>DermalyzeAI</title>
 </head>
 <body>
@@ -48,10 +48,10 @@
                     <h2 class="hero-sub">Predviđena klasa: <span>{{ naziv }}</span></h2>
                     <h2 class="hero-sub">Confidence score: <span>{{ confidence_score | round(2)}}</span></h2>
                 </div>
-                <div class="card1">
+                <div class="card2" id="uzrok">
                     <h2 class="hero-sub">Uzrok: <span>{{ uzrok}}</span></h2>
                 </div>
-                <div class="card1">
+                <div class="card3" id="mjere">
                     <h2 class="hero-sub">Mjere predostrožnosti: <span>{{ mjera_predostroznosti }}</span></h2>
                 </div>
             </div>
