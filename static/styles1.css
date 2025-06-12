@@ -12,38 +12,73 @@ body
 {
    background-image:
     linear-gradient(to bottom, rgba(255,255,255,0) 70%, rgba(255,255,255,1) 100%),
-    url("/pics/B1.png");
+    url("/static/pics/B1.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center bottom; 
   background-attachment: fixed; 
   width: 100%;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
   
-}
-.navbar
-{
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 25px;
 }
 .Logo
 {
     width: 22vh;
     height: 4vh;
 }
+.header
+{
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 100vh;           
+  flex-direction: column;  
+  transition: all 0.5s ease;
+}
+#shrink-header {
+  width: 70%; 
+   transition: all 0.5s ease;
+}
+.hero-sub
+{
+    background: linear-gradient(
+        to left,
+        #8d5524 20%,
+        #ce9b59 30%,
+        #e0ac69 70%,
+        #bc9057 80%
+    );
+    padding-top: 1%;
+    width: 100%;
+    background: linear-gradient(90deg, #8d5524 0%, #e0ac69);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  /* za druge pretraživače */
+    background-clip: text;
+    color: transparent;
+    font-size: x-large;
+    font-weight: 400;
+    padding-bottom: 20px;
+    align-items: center;
+    text-align: center;
+}
+.frm
+{
+    width: auto;
+    text-align: center;
+    align-items: center;
+
+}
 .button {
   position: relative;
-  padding: 10px 22px;
+  padding: 10px ;
   border-radius: 6px;
   border: none;
   color: #8d5524;
   cursor: pointer;
-  background-color: #f1c27d;
+  background-color: #f1ed7d;
   transition: all 0.2s ease;
   width: 10%;
   font-size: large;
@@ -133,41 +168,29 @@ body
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
-.hero-section
-{
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 8%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.lblFile,
+.frm button {
+  display: block;
+  margin: 10px auto;
 }
-.hero-left
+#btn
 {
-    width: 100%;
-    
+    background-color: #9af06f;
 }
-.hero-title
+.card {
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+.prediction-card
 {
-    width: 80%;
-    font-size: xxx-large;
- 
-     background: linear-gradient(
-        to left,
-        #8d5524 20%,
-        #ce9b59 30%,
-        #e0ac69 70%,
-        #bc9057 80%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 500% auto;
-    background-clip: text;
-    color: transparent;
-    animation: textShine 5s ease-in-out infinite alternate;
-    
+  width: 100%;
+  align-items:center;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
 }
 .hero-sub
 {
@@ -178,8 +201,8 @@ body
         #e0ac69 70%,
         #bc9057 80%
     );
-    padding-top: 3%;
-    width: 80%;
+ 
+    width: 100%;
     background: linear-gradient(90deg, #8d5524 0%, #e0ac69);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -188,111 +211,27 @@ body
     color: transparent;
     font-size: x-large;
     font-weight: 400;
-    padding-bottom: 20px;
+    
 }
-.hero-img
+.allCard
 {
-    width: 50%;
-}
-@keyframes textShine {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
-}
-#btnStyle
-{
-  width: 79%;
-  margin-top: 3%;
-}
-#liStyle
-{
-  text-align: center;
-
-}
-#liStyle1
-{
-  text-align: center;
-  font-size: 250px;
-  font-weight: 650 ;
-  animation: pulsateShadow 2s infinite ease-in-out;
-}
-.recognized-diseases
-{
-  width: 100%;
-  margin-left: 10%;
-  margin-top: 10%;
-  margin-right: 10%;
-  align-items: center;
-  
-}
-.disease-list {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* tri kolone */
-  gap: 1.5rem;
-  list-style: none;
-  padding: 0;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 5%;
- 
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.disease-list li {
+.card1
+{
   transition: transform 0.5s ease-in-out;
-  width: 40%;
-  background-image: url('/pics/card4.png');
+  width: 70%;
+  background-image: url('/static/pics/card4.png');
   background-size: cover;
-  padding: 1rem;
+
   border-radius: 8px;
   text-align: center;
   box-shadow: 4px 4px 6px #ab7a4f38;
-  color: #885c3c;
-  font-size: large;
-  font-weight: 500;
-  
 }
-.disease-list li:hover {
+.card1:hover
+{
   transform: scale(1.05);
-}
-.disease-list li:nth-last-child(2){
-
-  grid-column: 1;
-}
-.disease-list li:nth-last-child(1) {
-  grid-column: 3;
-}
-
-.btns
-{
-  
-  width: 17%;
-  display: flex;
-  flex-direction:  row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.lbl
-{
-  text-decoration: none;
-  color: #885c3c;
-  font-size: large;
-  font-weight: 500;
-}
-
-@keyframes pulsateShadow {
-  0% {
-    text-shadow: 0 0 5px #ab7a4f;
-  }
-  50% {
-    text-shadow: 0 0 15px #ab7a4f;
-  }
-  100% {
-    text-shadow: 0 0 5px #ab7a4f;
-  }
 }

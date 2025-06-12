@@ -3,11 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style/styles1.css">
+    <link rel="stylesheet"  href="{{ url_for('static', filename='styles1.css') }}">
 
     <title>DermalyzeAI</title>
 </head>
 <body>
-    
+  
+    <div class ="header" id="{% if uploaded_image %}shrink-header{% endif %}">
+        <img class="Logo" src="{{ url_for('static', filename='pics/Logo.png') }}" alt="Logo">
+        <h3 class="hero-sub">Dodaj sliku i odmah saznaj analizu svoje kože.</h3>
+        <form class="frm" method="POST" enctype="multipart/form-data">
+        <label class="button lblFile" for="fileInput">
+             📷 Odaberi sliku 📷
+            <input type="file" id="fileInput" name="file" required style="display:none;">
+            <img id="preview" src="" alt="Preview slike" style="display:none; max-width: 300px; margin-top: 15px; border-radius: 8px;">
+        </label>
+        <button class="button" id="btn" type="submit">🤖 Predvidi 🤖</button>
+        </form>
+         <script>
+            const fileInput = document.getElementById('fileInput');
+            const preview = document.getElementById('preview');
+
+            fileInput.addEventListener('change', function () {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        preview.src = e.target.result;
+                        preview.style.display = 'block';
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    preview.style.display = 'none';
+                    preview.src = '';
+                }
+            });
+</script>
+    </div>
+    {% if uploaded_image %}
+        <div class="prediction-card">
+             <img class="card" src="{{ uploaded_image }}" alt="Uploaded Image">
+             <div class="allCard">
+                <div class="card1">
+                    <h2 class="hero-sub">Predviđena klasa: <span>{{ naziv }}</span></h2>
+                    <h2 class="hero-sub">Confidence score: <span>{{ confidence_score | round(2)}}</span></h2>
+                </div>
+                <div class="card1">
+                    <h2 class="hero-sub">Uzrok: <span>{{ uzrok}}</span></h2>
+                </div>
+                <div class="card1">
+                    <h2 class="hero-sub">Mjere predostrožnosti: <span>{{ mjera_predostroznosti }}</span></h2>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    {% if error %}
+        <p class="error">{{ error }}</p>
+        
+    {% endif %}
 </body>
 </html>

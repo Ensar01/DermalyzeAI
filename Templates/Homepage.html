@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style/styles.css">
+    <link rel="stylesheet" href="/static/styles.css">
     <title>Dermalyze</title>
 </head>
 <body>
     <nav class = "navbar">
-        <img class="Logo" src = "/pics/Logo.png" alt="Logo">
+        <img class="Logo" src = "/static/pics/Logo.png" alt="Logo">
         <div class="btns">
             <a class="lbl" href="#liStyle">Saznaj više</a>
-            <button class="button" type="button" onclick="window.location.href='Predict.html'">Analiziraj</button>
+            <button class="button" type="button" onclick="window.location.href='http://127.0.0.1:5000/'">Analiziraj</button>
         </div>
     </nav>
     <div class="hero-section" >
         <div class = "hero-left" >
             <h2 class="hero-title">AI alat za jednostavnu i brzu dijagnozu kožnih problema</h2>
             <h3 class="hero-sub">Podrška u ranoj identifikaciji kožnih oboljenja pomoću AI</h3>
-            <button class="button" id="btnStyle" type="button">Započni analizu</button>
+            <button class="button" id="btnStyle" type="button" onclick="window.location.href='http://127.0.0.1:5000/'">Započni analizu</button>
         </div>
-        <img class="hero-img" src = "/pics/hero1.png" alt="hero">
+        <img class="hero-img" src = "/static/pics/hero1.png" alt="hero">
     </div>
     <div class="recognized-diseases">
         <h2 class="hero-title" id="liStyle"> DermalyzeAI prepoznaje</h2>
