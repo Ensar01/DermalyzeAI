@@ -245,7 +245,7 @@ body
 .disease-list li {
   transition: transform 0.5s ease-in-out;
   width: 40%;
-  background-image: url('/pics/card4.png');
+  background-image: url('/static/pics/card4.png');
   background-size: cover;
   padding: 1rem;
   border-radius: 8px;
