@@ -172,7 +172,7 @@ def classify_image(image_path):
     with torch.no_grad():
         outputs = model(image).logits
         probabilities = torch.nn.functional.softmax(outputs, dim = 1)
-        confidence, predicted_class = torch.max(probabilities, 1)
+        confidence, predicted_class = torch.max(probabilities, 1) # Za svaku sliku: uzima najvecu vjerovatnocu i pripadajucu klasu
     
     predicted_name = class_names[predicted_class.item()]
     confidence_score = confidence.item() * 100 
