@@ -21,6 +21,12 @@ Dermalyze uses a fine-tuned Vision Transformer (ViT) architecture trained on the
 | Epochs             | 10                |
 | Early Stopping     | Patience = 3      |
 
+##🧪 Example Prediction
+```bash 
+Predicted class: Acne and Rosacea Photos
+Confidence Score: 96.97%
+```
+
 ## 🔍 Limitations
 
 - Dataset may be biased toward lighter skin tones
