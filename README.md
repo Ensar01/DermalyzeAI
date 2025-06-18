@@ -9,3 +9,14 @@ Dermalyze uses a fine-tuned Vision Transformer (ViT) architecture trained on the
 - **Architecture:** ViT `vit-base-patch16-224-in21k`
 - **Input size:** 224x224 RGB images
 - **Fine-tuned on:** DermNet dataset (23 skin disease categories)
+
+## ⚙️ Training Setup
+
+| Setting            | Value             |
+|--------------------|-------------------|
+| Optimizer          | AdamW             |
+| Learning Rate      | 0.00002           |
+| Loss Function      | CrossEntropyLoss  |
+| Batch Size         | 16                |
+| Epochs             | 10                |
+| Early Stopping     | Patience = 3      |
