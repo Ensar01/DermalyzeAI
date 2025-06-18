@@ -20,3 +20,9 @@ Dermalyze uses a fine-tuned Vision Transformer (ViT) architecture trained on the
 | Batch Size         | 16                |
 | Epochs             | 10                |
 | Early Stopping     | Patience = 3      |
+
+## 🔍 Limitations
+
+- Dataset may be biased toward lighter skin tones
+- Model is not clinically validated
+- Should not be used as a substitute for medical diagnosis
