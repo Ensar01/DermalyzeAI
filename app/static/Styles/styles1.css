@@ -188,6 +188,7 @@ body
     color: transparent;
     font-size: x-large;
     font-weight: 400;
+    text-align: center;
     
 }
 @keyframes textShine {
